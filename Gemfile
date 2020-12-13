@@ -20,7 +20,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem "devise"
 
-gem 'carrierwave', "0.10.0"
+gem 'carrierwave-aws'
+gem 'carrierwave', "~> 1.0"
 gem 'fog', '~> 1.37.0'
 
 gem 'mini_magick'
