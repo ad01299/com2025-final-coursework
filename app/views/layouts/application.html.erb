@@ -10,13 +10,10 @@
     
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
-
-    
-  
   </head>
 
-  <body>
-    <% if ["public","devise"].include?(controller.controller_name) %>
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
+    <% if ["public","devise","sessions"].include?(controller.controller_name) %>
     <header>
       <%= render "layouts/nav/public" %>
       <%= yield %>
@@ -36,6 +33,8 @@
 
 
     <%#= render "layouts/footer" %>
+
+    <div id="notifications"><%= notice %></div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
