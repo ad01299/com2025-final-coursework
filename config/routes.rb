@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get 'dashboard/properties'
   get 'dashboard/reports'
   
-
   devise_for :accounts
   resources :properties
   root to: 'public#main'
