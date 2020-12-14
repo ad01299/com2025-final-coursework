@@ -10,6 +10,8 @@
     
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
