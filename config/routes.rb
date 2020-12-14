@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get "/dashboard" => 'dashboard#index', as: :dashboard
   get 'dashboard/properties'
   get 'dashboard/reports'
+  get "/contacts" => 'contacts#new', as: :contact
   
+  resources :contacts, only: [:new, :create]
   devise_for :accounts
   resources :properties
   root to: 'public#main'

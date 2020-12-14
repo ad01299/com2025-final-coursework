@@ -60,6 +60,20 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  config.assets.digest = true
+
+  config.assets.raise_runtime_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "ad01299@surrey.ac.uk",
+    port: 587,
+    domain: "localhost:3000",
+  }
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
+
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 

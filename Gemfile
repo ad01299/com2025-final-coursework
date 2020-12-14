@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem "devise"
 
+gem 'mail_form'
+
 
 
 # Reduces boot times through caching; required in config/boot.rb
