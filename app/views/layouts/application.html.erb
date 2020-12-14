@@ -13,7 +13,7 @@
   </head>
 
   <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
-    <% if ["public","devise","sessions","registrations"].include?(controller.controller_name) %>
+    <% if ["public","devise","sessions","registrations","contacts"].include?(controller.controller_name) %>
     <header>
       <%= render "layouts/nav/public" %>
       <%= yield %>
